@@ -35,7 +35,7 @@ def guessingGame():
     secretNumber = random.randint(1, maximum)
 
     for guessesMade in range (1, attempts):
-        time.sleep(random.randint(0,7)/5)
+        time.sleep(random.randint(2,5)/4)
         guess = intputVal('now, what u think is the number?', name)
         if guess < secretNumber:
             if guess < secretNumber/2:
@@ -53,13 +53,13 @@ def guessingGame():
     if guess == secretNumber:
         print('oh snap ' + name + '!! thats correct!')
         print('the number was indeed ' + str(secretNumber))
-        time.sleep(random.randint(0,7)/5)
+        time.sleep(random.randint(2,5)/4)
         print('you got it in ' + str(guessesMade) + ' tries :)')
     else:
         print('oof, u had ' + str(guessesMade) + ' tries and you never got it!')
-        time.sleep(random.randint(0,7)/5)
+        time.sleep(random.randint(2,5)/4)
         print('it was ' + str(secretNumber))
-    time.sleep(random.randint(0,7)/5)
+    time.sleep(random.randint(2,5)/4)
     print('thank you for playing, I hope you have a lovely day!')
 
 guessingGame()
